@@ -4,9 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import ToDo from './components/ToDo'
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ToDo />
   </React.StrictMode>,
   document.getElementById('root')
 );
