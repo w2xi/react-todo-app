@@ -1,53 +1,133 @@
-.todo-container {
-  width: 70%;
-  margin: 50px auto;
+html, 
+body,
+#root {
+  height: 100%;
 }
 
-.todo-input {
+li {
+  list-style-type: none;
+}
+
+ul {
+  padding-left: 0;
+}
+
+#root {
+  padding-top: 100px;
+  background-color: #f5f5f5;
+}
+
+.todo-app {
+  width: 800px;
+  padding-top: 25px;
+  background-color: #fff;
+  margin: 0 auto;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, .1);
+}
+
+.todo-app-title {
+  margin: 0px;
+  color: #666;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 1.5px;
+}
+
+.todo-app-main {
+  padding: 20px 40px;
+}
+
+.todo-app-input {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+  margin: 30px 0;
 }
 
-.todo-input > * {
-  line-height: 35px;
+.todo-app-input input {
+  width: 100%;
+  font-size: 16px;
+  color: #444;
   padding: 15px;
-  font-size: 20px;
-}
-
-.todo-input input {
-  width: 80%;
-  border: 2px solid #61a1e0;
+  border: 1px solid #ccc;
   outline: none;
 }
 
-.todo-input input:focus {
-  border: 2px solid #097aec;
+input::placeholder {
+  color: #888;
 }
 
-.todo-input button {
-  flex: 1;
-  margin-left: 10px;
-  font-size: 25px;
-  border-radius: 3px;
-  color: #fff;
-  border: 2px solid #409EFF;
-  background-color: #409EFF;
+.todo-app-input input:focus {
+  border: 1px solid #097aec;
+  box-shadow: 0 0 20px 4px rgba(12, 164, 235, 0.15);
 }
 
-.todo-list {
-  font-size: 20px;
-  color: #111;
+.todo-app-list-no-items {
+  padding: 20px;
+  color: #999;
+  background-color: #f1f1f1;
 }
 
-.todo-item {
-  margin-top: 10px;
+.todo-app-item {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
 }
 
-.todo-done {
-  font-size: 20px;
+.todo-app-item + .todo-app-item {
+  border-top: 1px solid rgba(0, 0, 0, .15);
+}
+
+.todo-app-item-label {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.todo-app-item-label,
+.todo-app-item-checkbox {
+  cursor: pointer;
+}
+
+.todo-app-item-content {
+  margin-left: 5px;
+  font-style: normal;
   color: #666;
 }
 
+.todo-app-item-content.checked {
+  text-decoration: line-through;
+  color: #aaa;
+}
 
+.todo-app-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  background-color: #efefef;
+}
+
+.todo-app-list-num {
+  color: #666;
+}
+
+.todo-app-actions {
+  display: flex;
+  margin: 0; 
+}
+
+.todo-app-actions li {
+  padding-bottom: 2px;
+  color: #777;
+  margin-left: 25px;
+  cursor: pointer;
+}
+
+.todo-app-actions li:hover {
+  color: #333;
+}
+
+.todo-app-actions li.active {
+  color: #333;
+  border-bottom: 2px solid #5b96d1;
+}
 

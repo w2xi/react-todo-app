@@ -4,11 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import ToDo from './components/ToDo'
+import ToDoApp from './components/ToDoApp'
 
 ReactDOM.render(
   <React.StrictMode>
-    <ToDo />
+    <ToDoApp />
   </React.StrictMode>,
   document.getElementById('root')
 );
